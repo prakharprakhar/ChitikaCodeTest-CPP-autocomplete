@@ -3,7 +3,12 @@ ChitikaCodeTest-CPP-autocomplete
 
 C++ code to perform autosuggest, using Trie data structure, console output
 
-Classes:
+
+Execute	:
+		./out "user query"
+		
+
+Classes :
 
   DataHandler : Class based on Strategy pattern. Encapsulate each logic, and make them interchangeable.
                 Strategy lets the algorithm vary independently from the clients that use it.
@@ -25,3 +30,5 @@ Classes:
   
   Heap        : To fetch top n queries
   Node        : A Trie node 
+
+
