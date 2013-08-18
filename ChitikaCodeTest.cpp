@@ -21,8 +21,15 @@ enum operationQueryDataStructure{
 };
 
 
-int main()
+int main(int argc, char * argv[])
 {
+	
+	if(argc < 2)
+	{
+   		cout << "No user query" << endl;
+		return 0;
+	}
+
 	DataHandler *dh = new DataHandler();
 	dh->performOperation(File, Trie);
 
@@ -38,9 +45,12 @@ int main()
 	//TODO	: OutputDisplay class
 	//		: Class defines the logic and size of the output results,
 	//			
+
+	string query(argv[1]);	
+	cout << "User Query = " << query << endl;
 	
 	Heap minheap;
-	dh->obj_l->suggestions("how to", minheap);
+	dh->obj_l->suggestions(query, minheap);
 	minheap.print();
 	return 0;
 }
